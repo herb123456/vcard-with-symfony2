@@ -1,0 +1,76 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'uglify-js',
+1 verbose cli   'uglify-css',
+1 verbose cli   '--prefix',
+1 verbose cli   'app/Resources' ]
+2 info using npm@1.1.62
+3 info using node@v0.8.11
+4 verbose read json /Applications/XAMPP/xamppfiles/htdocs/vcard/app/Resources/package.json
+5 verbose read json /Applications/XAMPP/xamppfiles/htdocs/vcard/app/Resources/package.json
+6 verbose cache add [ 'uglify-js', null ]
+7 silly cache add name=undefined spec="uglify-js" args=["uglify-js",null]
+8 verbose parsed url { pathname: 'uglify-js', path: 'uglify-js', href: 'uglify-js' }
+9 verbose cache add [ 'uglify-css', null ]
+10 silly cache add name=undefined spec="uglify-css" args=["uglify-css",null]
+11 verbose parsed url { pathname: 'uglify-css',
+11 verbose parsed url   path: 'uglify-css',
+11 verbose parsed url   href: 'uglify-css' }
+12 silly lockFile d31cae06-uglify-js uglify-js
+13 verbose lock uglify-js /Users/apple/.npm/d31cae06-uglify-js.lock
+14 silly lockFile d939a853-uglify-css uglify-css
+15 verbose lock uglify-css /Users/apple/.npm/d939a853-uglify-css.lock
+16 silly lockFile d31cae06-uglify-js uglify-js
+17 silly lockFile d939a853-uglify-css uglify-css
+18 verbose addNamed [ 'uglify-js', '' ]
+19 verbose addNamed [ null, '' ]
+20 silly lockFile 679a1028-uglify-js uglify-js@
+21 verbose lock uglify-js@ /Users/apple/.npm/679a1028-uglify-js.lock
+22 verbose addNamed [ 'uglify-css', '' ]
+23 verbose addNamed [ null, '' ]
+24 silly lockFile d84cde46-uglify-css uglify-css@
+25 verbose lock uglify-css@ /Users/apple/.npm/d84cde46-uglify-css.lock
+26 silly addNameRange { name: 'uglify-js', range: '', hasData: false }
+27 silly addNameRange { name: 'uglify-css', range: '', hasData: false }
+28 verbose url raw uglify-css
+29 verbose url resolving [ 'https://registry.npmjs.org/', './uglify-css' ]
+30 verbose url resolved https://registry.npmjs.org/uglify-css
+31 info trying registry request attempt 1 at 19:04:23
+32 http GET https://registry.npmjs.org/uglify-css
+33 verbose url raw uglify-js
+34 verbose url resolving [ 'https://registry.npmjs.org/', './uglify-js' ]
+35 verbose url resolved https://registry.npmjs.org/uglify-js
+36 info trying registry request attempt 1 at 19:04:23
+37 verbose etag "6CFO6WD43L7HT6IQ08U1YN9WU"
+38 http GET https://registry.npmjs.org/uglify-js
+39 http 404 https://registry.npmjs.org/uglify-css
+40 silly registry.get cb [ 404,
+40 silly registry.get   { date: 'Wed, 30 Apr 2014 11:04:24 GMT',
+40 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R14B04)',
+40 silly registry.get     'content-type': 'application/json',
+40 silly registry.get     via: '1.1 varnish',
+40 silly registry.get     'cache-control': 'max-age=0',
+40 silly registry.get     'content-length': '52',
+40 silly registry.get     'accept-ranges': 'bytes',
+40 silly registry.get     age: '0',
+40 silly registry.get     'x-served-by': 'cache-v41-ASH, cache-hk91-HKG',
+40 silly registry.get     'x-cache': 'MISS, MISS',
+40 silly registry.get     'x-cache-hits': '0, 0',
+40 silly registry.get     'x-timer': 'S1398855864.412922621,VS0,VS112,VE121,VE251',
+40 silly registry.get     'keep-alive': 'timeout=10, max=50',
+40 silly registry.get     connection: 'Keep-Alive' } ]
+41 silly lockFile d84cde46-uglify-css uglify-css@
+42 error 404 'uglify-css' is not in the npm registry.
+42 error 404 You should bug the author to publish it
+42 error 404
+42 error 404 Note that you can also install from a
+42 error 404 tarball, folder, or http url, or git url.
+43 error System Darwin 13.1.0
+44 error command "node" "/usr/local/bin/npm" "install" "uglify-js" "uglify-css" "--prefix" "app/Resources"
+45 error cwd /Applications/XAMPP/xamppfiles/htdocs/vcard
+46 error node -v v0.8.11
+47 error npm -v 1.1.62
+48 error code E404
+49 verbose exit [ 1, true ]
