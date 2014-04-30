@@ -1,0 +1,5 @@
+herb_vcard_contact:
+    resource: "@HerbVcardContactBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
