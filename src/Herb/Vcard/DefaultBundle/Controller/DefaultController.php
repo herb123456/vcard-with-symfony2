@@ -1,6 +1,6 @@
 <?php
 
-namespace Herb\Vcard\ContactBundle\Controller;
+namespace Herb\Vcard\DefaultBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
@@ -16,5 +16,4 @@ class DefaultController extends Controller
     {
         return array('name' => $name);
     }
-
 }

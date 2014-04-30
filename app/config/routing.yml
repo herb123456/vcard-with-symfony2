@@ -1,3 +1,8 @@
+herb_vcard_default:
+    resource: "@HerbVcardDefaultBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
 herb_vcard_contact:
     resource: "@HerbVcardContactBundle/Controller/"
     type:     annotation
