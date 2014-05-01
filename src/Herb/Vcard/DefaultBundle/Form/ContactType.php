@@ -19,7 +19,8 @@ class ContactType extends AbstractType
             ->add('email')
             ->add('phone')
             ->add('content')
-            ->add('captcha', 'captcha', ["invalid_message" => "驗證碼錯誤", "humanity" => 1])
+            ->add('captcha', 'captcha', ["invalid_message" => "驗證碼錯誤",
+                                         "keep_value" => false])
         ;
     }
     
