@@ -16,7 +16,7 @@ class AppKernel extends Kernel
             new Symfony\Bundle\AsseticBundle\AsseticBundle(),
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
-            new Herb\Vcard\ContactBundle\HerbVcardContactBundle(),
+            new Gregwar\CaptchaBundle\GregwarCaptchaBundle(),
             new Herb\Vcard\DefaultBundle\HerbVcardDefaultBundle(),
         );
 

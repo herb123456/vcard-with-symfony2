@@ -3,8 +3,3 @@ herb_vcard_default:
     type:     annotation
     prefix:   /
 
-herb_vcard_contact:
-    resource: "@HerbVcardContactBundle/Controller/"
-    type:     annotation
-    prefix:   /
-
