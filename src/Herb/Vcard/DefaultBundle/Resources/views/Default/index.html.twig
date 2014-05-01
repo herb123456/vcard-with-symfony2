@@ -1,1 +1,722 @@
-Hello {{ name }}!
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>簡歷</title>
+
+    {% stylesheets filter="compass, ?uglifycss"
+        "@HerbVcardDefaultBundle/Resources/assets/sass/style.sass"
+    %}
+    <link rel="stylesheet" href="{{ asset_url }}" media="screen, projection" type="text/css" />
+    {% endstylesheets %}
+</head>
+<body>
+
+<nav>
+    <ul class="menu" id="menu">
+        <div class="min-button">
+            <i class="fa fa-bars fa-2x"></i>
+        </div>
+        <li><a href="#aboutme">關於我</a></li>
+        <li><a href="#skills">技術專長</a></li>
+        <li><a href="#iuse">使用工具</a></li>
+        <li><a href="#resume">經歷</a></li>
+        <li><a href="#products">作品展示</a></li>
+        <li><a href="#contacts">聯繫我</a></li>
+    </ul>
+</nav>
+
+<section class="aboutme" id="aboutme" data-stellar-background-ratio="0.5">
+    <div class="mask aboutme-mask"></div>
+    <div class="container">
+        <h2>關於我</h2>
+
+        <div class="name-side">
+            <div class="wrapper">
+                <div class="head">
+                    <img src="{{ asset("images/me.png") }}" alt="">
+                </div>
+                <div class="name">
+                    翁傳翔
+                </div>
+                <div class="social-icon">
+                    <a href="http://www.facebook.com/herb123456" target="_blank">
+                        <i class="fa fa-facebook-square fa-3x"></i>
+                    </a>
+                    <a href="http://herb123456.blogspot.tw/" target="_blank">
+                        <i class="fa fa-rss-square fa-3x"></i>
+                    </a>
+                    <a href="https://github.com/herb123456" target="_blank">
+                        <i class="fa fa-github-square fa-3x"></i>
+                    </a>
+                    <a href="tel:555-555-5555">
+                        <i class="fa fa-phone-square fa-3x"></i>
+                    </a>
+                    <a href="mailto:herb123456@gmail.com">
+                        <i class="fa fa-envelope-o fa-3x"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+        <div class="intro-side">
+            我大學開始自學PHP，並先跟學校合作方式接下許多案件，累積一定經驗後就開始與外界接洽，此時期的PHP Framework並不盛行，
+            所以多用純PHP與自己寫Class的方式，並在大二時接觸到<span>ExtJS</span>，從此開始研究Javascript，包括<span>jQuery</span>、Mootools等Library，
+            也因此在研究所時，想從後端跳前端，之後就開始研究CSS，並且嘗試以<span>SASS + Compass</span>的方式，實現網頁前端的視覺設計，
+            並且搭配<span>Symfony2</span>，這是一套Full-stack PHP Framework，功能強大完善，適合快速開發，經過優化後速度可媲美輕量級Framework
+            Codeigniter。
+            在大三時，接觸到Embedded System，發現自己對<span>Linux</span>非常不熟悉，便花了大筆學費，上了LPI-II的課程，雖然最後沒去考，
+            但也因此讓我<span>CentOS</span>熟練度提升不少，目前對伺服器的架設與管理，已是非常熟悉。
+        </div>
+    </div>
+</section>
+
+<section class="skills" id="skills" data-stellar-background-ratio="0.5">
+    <div class="mask skills-mask"></div>
+    <div class="container">
+        <h2>技術專長</h2>
+        <div class="skills-col1">
+            <div class="skill">
+                <h5>PHP + MySQL - <span class="percent">90%</span></h5>
+                <div class="progress-bar-outer">
+                    <div class="progress-bar-content" style="width: 90%"></div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <h5>PHP Framework - <span class="percent">80%</span></h5>
+                <div class="progress-bar-outer">
+                    <div class="progress-bar-content" style="width: 80%"></div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <h5>Linux - <span class="percent">75%</span></h5>
+                <div class="progress-bar-outer">
+                    <div class="progress-bar-content" style="width: 75%"></div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <h5>Security - <span class="percent">60%</span></h5>
+                <div class="progress-bar-outer">
+                    <div class="progress-bar-content" style="width: 60%"></div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <h5>Performance Optimization - <span class="percent">80%</span></h5>
+                <div class="progress-bar-outer">
+                    <div class="progress-bar-content" style="width: 80%"></div>
+                </div>
+            </div>
+        </div>
+        <div class="skills-col2">
+            <div class="skill">
+                <h5>HTML & CSS - <span class="percent">90%</span></h5>
+                <div class="progress-bar-outer">
+                    <div class="progress-bar-content" style="width: 90%"></div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <h5>SASS & Compass - <span class="percent">75%</span></h5>
+                <div class="progress-bar-outer">
+                    <div class="progress-bar-content" style="width: 75%"></div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <h5>Javascript - <span class="percent">85%</span></h5>
+                <div class="progress-bar-outer">
+                    <div class="progress-bar-content" style="width: 85%"></div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <h5>SEO - <span class="percent">50%</span></h5>
+                <div class="progress-bar-outer">
+                    <div class="progress-bar-content" style="width: 50%"></div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <h5>Responesive Design - <span class="percent">70%</span></h5>
+                <div class="progress-bar-outer">
+                    <div class="progress-bar-content" style="width: 70%"></div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+</section>
+<section class="iuse" id="iuse" data-stellar-background-ratio="0.5">
+    <div class="mask iuse-mask"></div>
+    <div class="container">
+        <h2>使用工具</h2>
+        <div class="iuse-items">
+            <div class="iuse-item">PHP</div>
+            <div class="iuse-item">MySQL</div>
+            <div class="iuse-item">Symfony2</div>
+            <div class="iuse-item">ExtJS</div>
+            <div class="iuse-item">jQuery</div>
+            <div class="iuse-item">HTML</div>
+            <div class="iuse-item">CSS</div>
+            <div class="iuse-item">Google Analytics</div>
+            <div class="iuse-item">CentOS</div>
+            <div class="iuse-item">Apache</div>
+            <div class="iuse-item">Nginx</div>
+            <div class="iuse-item">Twitter Bootstrap</div>
+            <div class="iuse-item">SASS</div>
+            <div class="iuse-item">Compass</div>
+            <div class="iuse-item">Git</div>
+            <div class="iuse-item">Github</div>
+            <div class="iuse-item">Bitbucket</div>
+            <div class="iuse-item">YSlow</div>
+            <div class="iuse-item">Google page speed</div>
+            <div class="iuse-item">ipTables</div>
+            <div class="iuse-item">fail2ban</div>
+            <div class="iuse-item">loadimpact</div>
+        </div>
+    </div>
+</section>
+
+<section class="resume" id="resume" data-stellar-background-ratio="0.5">
+    <div class="container">
+        <h2>經歷</h2>
+        <ul class="timeline">
+
+            <li>
+                <div class="timeline-icon"></div>
+                <div class="timeline-content">
+                    <div class="timeline-content-title">
+                        買車通 網頁程式設計師
+                    </div>
+                    <div class="timeline-content-date">
+                        2013~2014
+                    </div>
+                    <div class="timeline-content-description">
+                        <p>這專案幾乎由我一手包辦，包括前期溝通、規劃、版面製作、資料庫規劃、後台管理界面與功能、前台除了首頁動畫外的JS、和CSS排版、Git版本控制、用bitbucket當remote repository、伺服器Raid5設定、伺服器架設（CentOS 6.5）、從Apache到Nginx+PHP-FPM、所有能優化網站速度的方法（讓YSlow的分數A，差上CDN．Google page speed分數B，因為沒有用到css sprites）、Security相關設定例如iptables、ssh、fail2ban </p>
+                        網址：<a href="http://www.buycarla.com/" target="_blank">http://www.buycarla.com</a>
+                    </div>
+                </div>
+            </li>
+
+            <li>
+                <div class="timeline-icon"></div>
+                <div class="timeline-content">
+                    <div class="timeline-content-title">
+                        研究生
+                    </div>
+                    <div class="timeline-content-date">
+                        2010~2012
+                    </div>
+                    <div class="timeline-content-description">
+                        <p>
+                            在大學期間，就有幫學長姐寫過論文的模擬程式，到了研究所依舊幫學長與自己寫，
+                            用的語言是C++和Java，這也讓我體驗到了不同語言的特性，還有對記憶體控制的重要性，
+                            在研究所學到的不止是論文與程式能力，更重要的是讓我擁有更強的抗壓性，和學習待人處世的方法。
+                        </p>
+                    </div>
+                </div>
+            </li>
+
+            <li>
+                <div class="timeline-icon"></div>
+                <div class="timeline-content">
+                    <div class="timeline-content-title">
+                        準備考Linux LPI-II
+                    </div>
+                    <div class="timeline-content-date">
+                        2009~2010
+                    </div>
+                    <div class="timeline-content-description">
+                        <p>
+                            在大三時，接觸到Embedded System，讓我大感興趣，當時就認為，
+                            如果要做些有趣的東西，光靠網頁程式是絕對不行的，所以就認真學習嵌入式系統，
+                            但在Linux使用上感到困難，雖然有GUI可操作，但大部分還是得靠Command完成，
+                            所以下定決心花了好幾萬去上Linux的課程，雖然叫證照保證班，但最後我沒去考，
+                            不過因此將Linux操作能力提升不少。
+                        </p>
+                    </div>
+                </div>
+            </li>
+
+            <li>
+                <div class="timeline-icon"></div>
+                <div class="timeline-content">
+                    <div class="timeline-content-title">
+                        Web Develeper
+                    </div>
+                    <div class="timeline-content-date">
+                        2007~2009
+                    </div>
+                    <div class="timeline-content-description">
+                        <p>
+                            在大二時開始接校外的案子，先是與校內視覺設計系學長合作，一起完成了
+                            高雄世運海報投票系統，後來因朋友介紹，接下金門體育會鐵人三項的網站，
+                            之後又陸陸續續接了很多，可參考下面<a href="#products" id="link-in-timeline">作品介紹</a>。
+                        </p>
+                    </div>
+                </div>
+            </li>
+
+            <li>
+                <div class="timeline-icon"></div>
+                <div class="timeline-content">
+                    <div class="timeline-content-title">
+                        電算中心工讀生兼校務系統維護人員
+                    </div>
+                    <div class="timeline-content-date">
+                        2006~2008
+                    </div>
+                    <div class="timeline-content-description">
+                        <p>
+                            大一入學第一天，就去應徵電算中心工讀生，在裡面我學習到很多，
+                            像是電腦維修、網路基礎知識與實務，也因為在裡面認識許多人，
+                            所以有很多機會接管校內程式，一開始是維護現有的，因年代久遠，有很多維護過的系統都忘記了，
+                            記得的有維護過流量管制系統、流量監控系統，
+                            最後有重新開發一些系統，像是選課系統、資料庫自動備份系統、租屋系統、大學課程報名系統、系所網頁等，
+                            不過可惜最後因為學校合併而不再沿用。
+                        </p>
+                    </div>
+                </div>
+            </li>
+
+        </ul>
+    </div>
+</section>
+
+<section class="some-quote" data-stellar-background-ratio="0.5">
+    <div class="mask quote-mask"></div>
+    <div class="container">
+        <blockquote>
+            <p>
+                你的時間花在哪裡，你的成就就在哪裡。
+            </p>
+            <small>
+                我的大學教授
+            </small>
+        </blockquote>
+    </div>
+
+</section>
+
+<section class="products" id="products">
+<div class="container">
+<h2>作品展示</h2>
+
+<div class="prods">
+
+<div class="prod">
+    <div class="prod-thumb">
+        <img src="{{ asset("site_sample/buycarla.png") }}" alt="買車通">
+        <div class="mask" onclick="window.open('http://www.buycarla.com')">
+            <div class="more">
+                <i class="fa fa-globe fa-4x"></i>
+            </div>
+        </div>
+    </div>
+    <div class="prod-title">
+        <p>
+            買車通
+        </p>
+        <p>
+            買車通是一個連接北美與台灣車商的交易平台，透過網站進行線上撮合配對機制，
+            進口二手高檔轎車，並有提供改裝與代客送檢的服務。
+        </p>
+        <p>
+            此專案後端使用<span>Symfony2 + Doctrine2 + MySQL</span>完成，前端雖是購買themeforest的樣板，
+            但也經過一定客製化，並優化<span>Responsive Design</span>。
+        </p>
+    </div>
+</div>
+
+<div class="prod">
+    <div class="prod-thumb">
+        <img src="{{ asset("site_sample/eastdeerfarm.png") }}" alt="全國養鹿場">
+        <div class="mask" onClick="window.open('http://www.eastdeerfarm.com')">
+            <div class="more">
+                <i class="fa fa-globe fa-4x"></i>
+            </div>
+        </div>
+    </div>
+    <div class="prod-title">
+        <p>
+            全國養鹿場
+        </p>
+        <p>
+            一間位於花蓮的養鹿場，使用天然飼料養殖，並用無毒農業技術栽培天然飼料，
+            可說是台灣少數採用最天然方式，養殖鹿隻的養鹿場。
+        </p>
+        <p>
+            此專案因免費幫忙，所以第一次嘗試前端開發，使用<span>Twitter Bootstrap + jQuery</span>當前端framework，
+            後端則是使用<span>Symfony2 + Porpel + MySQL</span>。
+        </p>
+    </div>
+
+</div>
+
+
+
+<div class="prod">
+    <div class="prod-thumb">
+        <img src="{{ asset("site_sample/ict.png") }}" alt="中小學資訊能力評量機制發展與推廣計畫">
+        <div class="mask">
+            <div class="more">
+                <i class="fa fa-search-plus fa-3x"></i>
+            </div>
+        </div>
+    </div>
+    <div class="prod-title">
+        <p>
+            中小學資訊能力評量機制發展與推廣計畫
+        </p>
+        <p>
+            由學校與教育部合作的計劃，主旨在提升中小學生資訊能力，以趣味題目引導學生操作資訊軟體，
+            並記錄學生操作過程，最後以半自動方式評分。
+        </p>
+        <p>
+            此專案在當時還沒有Google Doc的時代下誕生，我負責維護線上模擬的檔案總管, Word, Excel, Powerpoint，
+            全以<span>純Javascript</span>撰寫，並有經過類似uglifyJS的處理，在這極端惡劣的情況下，客製出專案的需求。
+        </p>
+    </div>
+
+</div>
+
+<div class="prod">
+    <div class="prod-thumb">
+        <img src="{{ asset("site_sample/elearning.png") }}" alt="蛙蛙數位學院線上學習平台">
+        <div class="mask" onClick="window.open('http://e-learning.froghome.org/')">
+            <div class="more">
+                <i class="fa fa-globe fa-4x"></i>
+            </div>
+        </div>
+    </div>
+    <div class="prod-title">
+        <p>
+            蛙蛙數位學院線上學習平台
+        </p>
+        <p>
+            一個線上青蛙學習平台，包含猜猜我是誰及闖關測驗等學習方式，
+            網站還提供蛙聲辨識系統。
+        </p>
+        <p>
+            此平台由moodle架設，並另外撰寫學習系統與之串接，後端使用<span>PHP + MySQL</span>，
+            並以自己寫的Class使其擁有高度彈性，中間被追加和修改數次需求，都能輕易滿足，
+            前端則是使用<span>ExtJS</span>。
+        </p>
+    </div>
+
+</div>
+
+<div class="prod">
+    <div class="prod-thumb">
+        <img src="{{ asset("site_sample/kingmen.png") }}" alt="金門體育會鐵人三項運動委員會">
+        <div class="mask">
+            <div class="more">
+                <i class="fa fa-search-plus fa-3x"></i>
+            </div>
+        </div>
+    </div>
+    <div class="prod-title">
+        <p>
+            金門體育會鐵人三項運動委員會
+        </p>
+        <p>
+            金門體育會鐵人三項運動委員會的介紹網站，其中包含自己規劃撰寫的購物車，
+            最後因金費不足沒有上線。
+        </p>
+        <p>
+            此專案使用<span>PHP + MySQL</span>，前端則是<span>ExtJS</span>，
+            包含第一次撰寫購物車與購物流程等經驗。
+        </p>
+    </div>
+
+</div>
+
+<div class="prod">
+    <div class="prod-thumb">
+        <img src="{{ asset("site_sample/2009.png") }}" alt="高雄世運會學生海報投票系統">
+        <div class="mask">
+            <div class="more">
+                <i class="fa fa-search-plus fa-3x"></i>
+            </div>
+        </div>
+    </div>
+    <div class="prod-title">
+        <p>
+            高雄世運會學生海報投票系統
+        </p>
+        <p>
+            在高雄世運舉辦前，當時為了選出最好的海報，所舉辦的投票活動，
+            由我與視覺設計系學長一起合作完成。
+        </p>
+        <p>
+            後端由<span>PHP + MySQL</span>完成，前端則是<span>ExtJS</span>。
+        </p>
+    </div>
+
+</div>
+
+<div class="prod">
+    <div class="prod-thumb">
+        <img src="{{ asset("site_sample/lainan.png") }}" alt="聯安保全">
+        <div class="mask">
+            <div class="more">
+                <i class="fa fa-search-plus fa-3x"></i>
+            </div>
+        </div>
+    </div>
+    <div class="prod-title">
+        <p>
+            合作案-聯安保全
+        </p>
+        <p>
+            這是跟一家在花蓮最大的多媒體公司合作，
+            負責的是後台管理界面與前台資料串接
+        </p>
+
+        <p>
+            後台全部使用<span>ExtJS</span>的UI，簡單易用，減緩管理者的學習曲線與時間，
+            並以<span>PHP + MySQL</span>完成資料的處理。
+        </p>
+    </div>
+
+</div>
+
+<div class="prod">
+    <div class="prod-thumb">
+        <img src="{{ asset("site_sample/mm.png") }}" alt="家和有線電視bb寬頻美媚選拔">
+        <div class="mask">
+            <div class="more">
+                <i class="fa fa-search-plus fa-3x"></i>
+            </div>
+        </div>
+    </div>
+    <div class="prod-title">
+        <p>
+            家和有線電視bb寬頻美媚選拔
+        </p>
+        <p>
+            這是 bb 寬頻剛成立時，要徵選代言美女，
+            並且是要在2~3周內完成，算是很趕的專案。
+        </p>
+        <p>
+            算是救火的成功案例，在極短時間內，把投票系統做出來，
+            並完成後台管理，最後還追加灌票機制(?)。
+        </p>
+    </div>
+
+</div>
+
+<div class="prod">
+    <div class="prod-thumb">
+        <img src="{{ asset("site_sample/searchClass.png") }}" alt="課程搜尋系統">
+        <div class="mask" onclick="window.open('site_sample/searchClass/index.html')">
+            <div class="more">
+                <i class="fa fa-globe fa-4x"></i>
+            </div>
+        </div>
+    </div>
+    <div class="prod-title">
+        <p>
+            課程搜尋系統
+        </p>
+        <p>
+            學校在選課前，會提供該系統給學生查詢欲選課程的資訊，
+            但當時的系統很難用，所以委託我重新製作。
+        </p>
+        <p>
+            後端使用<span>PHP + Oracle</span>，前端則是<span>ExtJS</span>，畫面也是ExtJS的UI組成。
+        </p>
+    </div>
+
+</div>
+
+<div class="prod">
+    <div class="prod-thumb">
+        <img src="{{ asset("site_sample/cisindex.png") }}" alt="資訊科學系系網站">
+        <div class="mask" onclick="window.open('site_sample/cisindex/index.html')">
+            <div class="more">
+                <i class="fa fa-globe fa-4x"></i>
+            </div>
+        </div>
+    </div>
+    <div class="prod-title">
+        <p>
+            資訊科學系系網站
+        </p>
+        <p>
+            就是一個系上介紹網站。
+        </p>
+        <p>
+            選單以Swish做成的動畫，公告系統則是<span>PHP + MySQL</span>。
+        </p>
+    </div>
+
+</div>
+
+<div class="prod">
+    <div class="prod-thumb">
+        <img src="{{ asset("site_sample/sign2.png") }}" alt="大學課程報名系統">
+        <div class="mask">
+            <div class="more">
+                <i class="fa fa-search-plus fa-3x"></i>
+            </div>
+        </div>
+    </div>
+    <div class="prod-title">
+        <p>
+            大學課程報名系統
+        </p>
+        <p>
+            這是給校外人士，報名校內課程用的系統，包含註冊系統、會員機制、報名系統等。
+        </p>
+        <p>
+            我只負責後端程式設計，使用<span>PHP + MySQL</span>。
+        </p>
+    </div>
+
+</div>
+
+<div class="prod">
+    <div class="prod-thumb">
+        <img src="{{ asset("site_sample/renth.png") }}" alt="校外租屋系統">
+        <div class="mask">
+            <div class="more">
+                <i class="fa fa-search-plus fa-3x"></i>
+            </div>
+        </div>
+    </div>
+    <div class="prod-title">
+        <p>
+            校外租屋系統
+        </p>
+        <p>
+            這算是我接的第一個案子，當時學校還在用Excel的方式公告租屋資訊。
+        </p>
+        <p>
+            因為對PHP還不熟悉，算是一種嘗試性質的專案，前端用HTML+Table排版，
+            算是非常久以前的排版方式，後端則是非常零散的PHP，並且多是Dreamweaver產生的程式碼。
+        </p>
+    </div>
+
+</div>
+
+
+
+
+
+
+</div>
+
+</div>
+</section>
+
+<section class="contacts" id="contacts">
+    <div class="container">
+        <h2>聯絡我</h2>
+        <div class="social-icon">
+            <a href="http://www.facebook.com/herb123456" target="_blank">
+                <i class="fa fa-facebook-square fa-3x"></i>
+            </a>
+            <a href="http://herb123456.blogspot.tw/" target="_blank">
+                <i class="fa fa-rss-square fa-3x"></i>
+            </a>
+            <a href="https://github.com/herb123456" target="_blank">
+                <i class="fa fa-github-square fa-3x"></i>
+            </a>
+            <a href="tel:555-555-5555">
+                <i class="fa fa-phone-square fa-3x"></i>
+            </a>
+            <a href="mailto:herb123456@gmail.com">
+                <i class="fa fa-envelope-o fa-3x"></i>
+            </a>
+        </div>
+        <div class="contact-form" >
+            {{ form_start(form, {attr: { id: "contact_form" } } ) }}
+
+            {#<form method="POST" action="" id="contact_form">#}
+                <div class="field">
+                    <label for="name">姓名（暱稱）*</label>
+                    {{ form_widget(form.name) }}
+                    <label for="captcha" class="error-msg">{{ form_errors(form.name) }}</label>
+                </div>
+                <div class="field">
+                    <label for="email">E-mail*</label>
+                    {{ form_widget(form.email) }}
+                    <label for="captcha" class="error-msg">{{ form_errors(form.email) }}</label>
+                </div>
+                <div class="field">
+                    <label for="phone">電話</label>
+                    {{ form_widget(form.phone) }}
+                    <label for="captcha" class="error-msg">{{ form_errors(form.phone) }}</label>
+                </div>
+                <div class="field-textarea">
+                    <label for="message">訊息*</label>
+                    {{ form_widget(form.content) }}
+                    <label for="captcha" class="error-msg">{{ form_errors(form.content) }}</label>
+                </div>
+
+                <div class="field field-captcha">
+                    <label for="captcha">驗證碼</label>
+                    {{ form_widget(form.captcha) }}
+                    <label for="captcha" class="error-msg">{{ form_errors(form.captcha) }}</label>
+                </div>
+
+                <div class="field-button">
+                    <button type="submit">送出</button>
+                </div>
+
+            {{ form_end(form) }}
+
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>
+        © 2014. <a href="mailto:herb123456@gmail.com">Herb</a> All Rights Reserved.
+    </p>
+</footer>
+
+{#<script src="js/jquery.2.1.0.min.js"></script>#}
+{#<script src="js/stellar.0.6.2.min.js"></script>#}
+{#<script src="js/waypoints.min.js"></script>#}
+{#<script src="js/jquery.smooth-scroll.min.js"></script>#}
+{#<script src="js/jquery.nicescroll.min.js"></script>#}
+
+{% javascripts
+    "@HerbVcardDefaultBundle/Resources/assets/js/jquery.2.1.0.min.js"
+    "@HerbVcardDefaultBundle/Resources/assets/js/stellar.0.6.2.min.js"
+    "@HerbVcardDefaultBundle/Resources/assets/js/waypoints.min.js"
+    "@HerbVcardDefaultBundle/Resources/assets/js/jquery.smooth-scroll.min.js"
+    "@HerbVcardDefaultBundle/Resources/assets/js/jquery.nicescroll.min.js"
+    "@HerbVcardDefaultBundle/Resources/assets/js/jquery.validate.min.js"
+    "@HerbVcardDefaultBundle/Resources/assets/js/index.js"
+
+filter="?uglifyjs2"
+%}
+
+<script src="{{ asset_url }}"></script>
+{% endjavascripts %}
+
+{% if not form.vars.valid %}
+    {# Jump to here #}
+
+    <script type="text/javascript">
+        console.log($);
+        $(document).on("ready", function (){
+            alert("再檢查一下你的輸入喔!");
+            var top = document.getElementById("contact_form").offsetTop;
+            window.scrollTo(0, top);
+        });
+
+    </script>
+{% endif %}
+
+</body>
+</html>
