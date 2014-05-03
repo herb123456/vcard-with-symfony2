@@ -1,6 +1,137 @@
-/*
-  Welcome to Compass. Use this file to define print styles.
-  Import this file using the following HTML or equivalent:
-  <link href="/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" />
-  
+@import compass/reset
+@import compass/css3
+@import compass/utilities/general/clearfix
 
+$font-size: 14px
+$line-height: 25px
+
+nav, .some-quote, .contacts, .mask, .social-icon, .head
+    display: none
+    visibility: hidden
+
+section h2
+    font-size: 36px
+    margin: 20px
+body
+    padding-right: 30px
+    font-size: $font-size
+    line-height: $line-height
+
+.aboutme
+    +clearfix
+    .container
+        +clearfix
+        h2
+            @extend nav
+        .name-side
+            // float: left
+            // width: 45%
+            text-align: center
+            .name
+                margin: 1cm 0 20px 20px
+                font-size: 32px
+                position: relative
+                width: 150px
+                &:after
+                    content: "PHP Programer"
+                    position: absolute
+                    bottom: -25px
+                    right: 0
+                    left: 0
+                    margin: auto
+                    font-size: 12px
+                .print-info
+                    width: 300px
+                    position: absolute
+                    top: 0
+                    left: 200px
+                    font-size: $font-size
+                    line-height: $line-height
+
+        .intro-side
+            text-align: left
+            margin: 50px 0 25px 150px
+            span
+                font-size: $font-size + 1
+                font-weight: bold
+                margin: 0 7px
+
+.skills
+    +clearfix
+    .container
+        h2
+            text-align: center
+        .skills-col1
+            text-align: left
+            margin: 15px 0 15px 150px
+            &:before
+                content: 'Backend skills'
+                font-size: $font-size + 5
+                font-weight: bold
+                display: block
+                margin: 0 0 5px 0px
+        .skills-col2
+            @extend .skills-col1
+            &:before
+                content: 'Frontend skills'
+                margin-top: 10px
+        .skill
+            display: inline-block
+            margin: 3px 10px
+
+.iuse
+    @extend nav
+
+.resume
+    +clearfix
+    .container
+        h2
+            text-align: center
+        .timeline
+            text-align: left
+            margin: 20px 0 25px 150px
+            .timeline-content
+                .timeline-content-title
+                    font-size: $font-size + 8
+                    font-weight: bold
+                .timeline-content-date
+                    font-size: $font-size - 4
+                    margin: 5px 0 10px 10px
+                .timeline-content-description
+                    margin: 10px 0 15px 30px
+
+.products
+    +clearfix
+    .container
+        h2
+            text-align: center
+        .prod
+            margin: 15px 0
+            .prod-thumb
+                display: inline-block
+                width: 35%
+                img
+                    width: 100%
+            .prod-title
+                display: inline-block
+                width: 63%
+                padding-left: 25px
+                +box-sizing(border-box)
+                span
+                    font-size: $font-size + 1
+                    font-weight: bold
+                    margin: 0 7px
+                p:nth-child(1)
+                    font-size: $font-size + 4
+                    font-weight: bold
+                    margin: 0
+                p
+                    margin: 5px 0 5px 10px
+
+
+footer
+    p
+        @extend nav
+    .print-info
+        text-align: center
+        margin: 30px 0
