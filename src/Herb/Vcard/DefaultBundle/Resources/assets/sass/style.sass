@@ -32,7 +32,7 @@ section
         width: 100%
         height: 100%
         z-index: 1
-    .social-icon
+    .social-icon, .print-and-download
         a
             display: inline-block
             background: transparent
@@ -42,6 +42,10 @@ section
                 color: #fff
 img
     +border-radius(5px)
+
+.print-info
+    display: none
+    visibility: hidden
 
 blockquote
     border-left: 3px solid #e7e9ec
@@ -182,6 +186,11 @@ blockquote
                 .social-icon
                     a
                         margin: 0 5px
+                        +max-screen($screen-sm)
+                            font-size: $font-size - 5px
+                .print-and-download
+                    a
+                        margin: 15px 10px
                         +max-screen($screen-sm)
                             font-size: $font-size - 5px
         .intro-side

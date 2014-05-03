@@ -23,7 +23,13 @@
     {% stylesheets filter="compass, uglifycss"
         "@HerbVcardDefaultBundle/Resources/assets/sass/style.sass"
     %}
-    <link rel="stylesheet" href="{{ asset_url }}" media="all" type="text/css" />
+    <link rel="stylesheet" href="{{ asset_url }}" media="screen, aural, braille, embossed, handheld, projection, screen, tty, tv" type="text/css" />
+    {% endstylesheets %}
+
+    {% stylesheets filter="compass, uglifycss"
+        "@HerbVcardDefaultBundle/Resources/assets/sass/print.sass"
+    %}
+    <link rel="stylesheet" href="{{ asset_url }}" media="print" type="text/css" />
     {% endstylesheets %}
 </head>
 <body>
@@ -54,6 +60,11 @@
                 </div>
                 <div class="name">
                     翁傳翔
+
+                    <div class="print-info">
+                        電話：0985-979-513 <br>
+                        E-mail: herb123456@gmail.com
+                    </div>
                 </div>
                 <div class="social-icon">
                     <a href="http://www.facebook.com/herb123456" target="_blank">
@@ -70,6 +81,16 @@
                     </a>
                     <a href="mailto:herb123456@gmail.com">
                         <i class="fa fa-envelope-o fa-3x"></i>
+                    </a>
+                </div>
+
+                <div class="print-and-download">
+                    <a href="javascript:window.print()" title="Print my resume">
+                        <i class="fa fa-print fa-3x"></i>
+                    </a>
+
+                    <a href="{{ asset("resume.pdf") }}" title="Download my resume">
+                        <i class="fa fa-download fa-3x"></i>
                     </a>
                 </div>
             </div>
@@ -697,6 +718,10 @@
     <p>
         © 2014. <a href="mailto:herb123456@gmail.com">Herb</a> All Rights Reserved.
     </p>
+    <div class="print-info">
+        電話：0985-979-513 <br>
+        E-mail: herb123456@gmail.com
+    </div>
 </footer>
 
 {#<script src="js/jquery.2.1.0.min.js"></script>#}
