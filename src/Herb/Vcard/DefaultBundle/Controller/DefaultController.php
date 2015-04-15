@@ -40,7 +40,7 @@ class DefaultController extends Controller
                 // E-mail
                 $message = \Swift_Message::newInstance()
                     ->setSubject( $contact->getName()." 透過履歷網站聯絡你!")
-                    ->addFrom( $contact->getEmail() )
+                    ->addFrom( "root@mail.iphpo.com" )
                     ->addTo("herb123456@gmail.com")
                     ->setBody(
                         $this->renderView("HerbVcardDefaultBundle:Default:mail.html.twig", ["contact" => $contact])
